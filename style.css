@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+/* 1rem-10px으로 하기 위해서 62.5%로 지정함*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+/*  */
+.wrap {
+  width: 100%;
+  border: 1px solid slateblue;
+}
+
+.wrap-top-banner {
+  width: 100%;
+  background: slategray;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  border: 1px solid saddlebrown;
+}
+.gnb-inner {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 2fr 1fr;
+  gap: 1rem;
+  background: sandybrown;
+}
+/* 영역지정 */
+.logo {
+  font-size: 2rem;
+  text-align: center;
+  grid-column: 1/2;
+  /* line-height: 50px; */
+  display: grid;
+  place-items: center;
+
+  background: steelblue;
+}
+.nav {
+  grid-column: 2 / span 1;
+  background: skyblue;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* line-height: 50px; */
+  place-items: center;
+}
+.util-wrap {
+  grid-column: 3/-1;
+  background: slateblue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.util-guide {
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  grid-template-columns: repeat(2, 1fr);
+  background: silver;
+}
+.util-list {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  background: saddlebrown;
+}
+/* main */
+.main {
+  border: 1px solid #000;
+
+  /* 1200px ~  */
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    /* 아직 안에 내용이 없으니 height지정 */
+    /* height: 500px; */
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main-top-wrap {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border: 1px solid seagreen;
+}
+.article-left {
+  grid-row: 1/-1;
+}
+.grid-wrap {
+  display: grid;
+  /* height: 500px; */
+  background: lemonchiffon;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows: minmax(50px, auto); 아래줄로 하는게 맞음..*/
+  grid-template-rows: repeat(3, 1fr);
+}
+.grid-wrap li {
+  border: 1px solid saddlebrown;
+  height: 100%;
+}
+.grid-wrap .grid-item-one {
+  /* padding: 20px; */
+  grid-column: 1 / span 2;
+  grid-row: 1/3;
+  background: skyblue;
+  /*  */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 1fr;
+  padding: 30px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background: silver;
+  h3 {
+    grid-column: 1/-1;
+  }
+  button {
+    padding: 1rem;
+  }
+  .one-img {
+    width: 100px;
+    height: 100px;
+    background: salmon;
+  }
+}
+.grid-item-four {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 50px 1fr;
+  background-color: green;
+  box-sizing: border-box;
+  h3 {
+    grid-column: 1/-1;
+  }
+  .one-button-box {
+    border: 1px solid red;
+    padding-right: 3rem;
+  }
+  .one-img {
+    border: 1px solid yellow;
+    background: salmon;
+  }
+}
+.article-main-mid-banner {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+}
+.right-promotion {
+  .promotion {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: steelblue;
+    .promotion-title {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+      grid-auto-rows: 50px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      /* background: salmon; */
+      span {
+        margin-left: auto;
+      }
+    }
+    .promotion-tab {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30px, auto));
+      padding: 1rem;
+      font-size: 14px;
+      li {
+        padding: 2px;
+      }
+    }
+    .right {
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      width: 230px;
+      height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      /* right one */
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 1rem;
+
+        li {
+        }
+      }
+      .one-grid {
+        /* border: 1px solid slateblue; */
+        .right-title {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      p {
+        font-size: 2.4rem;
+      }
+      p.sale {
+        font-size: 2rem;
+      }
+      button {
+        padding: 1rem;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
+      }
+      .img {
+        height: 100px;
+        background: hotpink;
+      }
+      &.one {
+        background: rgb(176, 135, 190);
+      }
+      &.two {
+        background: sandybrown;
+      }
+      &.three {
+        background: yellowgreen;
+      }
+      &.four {
+        background: darkgoldenrod;
+      }
+    }
+  }
+  .promotion-btn {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
+.article-rank {
+  .rank-main-title {
+    display: grid;
+    height: 50px;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid red;
+    h3 {
+      padding: 1rem;
+      background: lightslategray;
+    }
+    span {
+      padding: 1rem;
+      /* 바로 text가있으므로 text-align이 먹힌다.-부모에 주는거임원래는. */
+      text-align: right;
+      background: skyblue;
+      /* justify-self: flex-end; */
+      /* margin-left: auto; */
+    }
+  }
+  .list-contaner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: lightgreen;
+    padding: 1rem;
+  }
+  .rank-title-list {
+    padding: 1rem;
+    --margin-inline: 0.5rem;
+    --margin-block: 0.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 1fr 100px;
+    grid-auto-rows: minmax(30px, auto);
+    background: #fff;
+    border: 1px solid red;
+    border-radius: 1rem;
+    margin-inline: var(--margin-in, var(--margin-inline));
+    margin-block: var(--margin-b, var(--margin-block));
+
+    li:first-child {
+      padding: 10px;
+      background: #000;
+      color: #fff;
+    }
+    li:nth-child(2) {
+      margin-left: 0.5rem;
+    }
+  }
+}
